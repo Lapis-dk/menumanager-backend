@@ -33,7 +33,7 @@ public class MenuItemController {
         return menuItem.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // Add a new menu item
+    // Add a new menu item with Base64-encoded image
     @PostMapping
     public MenuItem addMenuItem(@RequestBody MenuItem menuItem) {
         return menuItemRepository.save(menuItem);
@@ -49,6 +49,7 @@ public class MenuItemController {
             menuItem.setDescription(updatedMenuItem.getDescription());
             menuItem.setPrice(updatedMenuItem.getPrice());
             menuItem.setImage(updatedMenuItem.getImage());
+
             return ResponseEntity.ok(menuItemRepository.save(menuItem));
         } else {
             return ResponseEntity.notFound().build();

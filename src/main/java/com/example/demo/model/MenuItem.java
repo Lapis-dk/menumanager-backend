@@ -1,4 +1,3 @@
-// MenuItem.java
 package com.example.demo.model;
 
 import org.springframework.data.annotation.Id;
@@ -67,6 +66,4 @@ public class MenuItem {
     public void setImage(String image) {
         this.image = image;
     }
-
-    // toString, hashCode, equals can also be overridden as needed
 }
