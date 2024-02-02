@@ -20,7 +20,7 @@ public class MenuItemController {
         this.menuItemRepository = menuItemRepository;
     }
 
-    // Get all menu items
+    // Get all menu items.
     @GetMapping
     public List<MenuItem> getAllMenuItems() {
         return menuItemRepository.findAll();
