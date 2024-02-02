@@ -26,7 +26,7 @@ public class MenuItemController {
         return menuItemRepository.findAll();
     }
 
-    // Get a specific menu item by ID
+    // Get a specific menu item by ID.
     @GetMapping("/{id}")
     public ResponseEntity<MenuItem> getMenuItemById(@PathVariable String id) {
         Optional<MenuItem> menuItem = menuItemRepository.findById(id);

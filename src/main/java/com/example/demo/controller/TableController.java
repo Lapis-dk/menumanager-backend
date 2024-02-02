@@ -41,7 +41,7 @@ public class TableController {
             // Table with the same ID already exists, issue a warning
             return ResponseEntity.badRequest().body("Table with ID " + table.getId() + " already exists.");
         } else {
-            // save the new table and return the result
+            // Table does not exist, save the new table and return the result
             return ResponseEntity.ok(tableRepository.save(table));
         }
     }
