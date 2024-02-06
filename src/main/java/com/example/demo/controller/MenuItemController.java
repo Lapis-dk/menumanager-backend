@@ -49,13 +49,13 @@ public class MenuItemController {
             menuItem.setDescription(updatedMenuItem.getDescription());
             menuItem.setPrice(updatedMenuItem.getPrice());
             menuItem.setImage(updatedMenuItem.getImage());
+            menuItem.setCookingTime(updatedMenuItem.getCookingTime());
 
             return ResponseEntity.ok(menuItemRepository.save(menuItem));
         } else {
             return ResponseEntity.notFound().build();
         }
     }
-
     // Delete a menu item by ID
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteMenuItem(@PathVariable String id) {

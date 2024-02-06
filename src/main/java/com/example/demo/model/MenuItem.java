@@ -13,6 +13,8 @@ public class MenuItem {
     private double price;
     private String image;
 
+    private int cookingTime;
+
     // Constructors
 
     public MenuItem() {
@@ -23,6 +25,7 @@ public class MenuItem {
         this.description = description;
         this.price = price;
         this.image = image;
+
     }
 
     // Getters and Setters
@@ -65,5 +68,13 @@ public class MenuItem {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public int getCookingTime() {
+        return cookingTime;
+    }
+
+    public void setCookingTime(int cookingTime) {
+        this.cookingTime = cookingTime;
     }
 }
