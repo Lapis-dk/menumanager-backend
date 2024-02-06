@@ -15,7 +15,7 @@ public class MenuItem {
 
     private int cookingTime;
 
-    // Constructors
+    // Constructo
 
     public MenuItem() {
     }
